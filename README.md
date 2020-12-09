@@ -44,7 +44,7 @@ This dataset can be find here [Airline on-time performance](http://stat-computin
 
 ## **Project Development**
 
-####**Step 1**
+####** Step 1**
 
 We have the historical data, for batch processing let us ingest the dataset into
 our on-prem Hadoop HDFS.
@@ -57,20 +57,20 @@ our on-prem Hadoop HDFS.
 * copy data from local file system to HDFS.  
 ```hdfs dfs -copyFromLocal /input_data/* /input_data```
 
-####**Step 2**
+#### **Step 2**
 
 * Created staged table to understand the data types and transformations required to batch processing.  
 * Created static partitioning on year for fast retrieval for text format.  
 *  [click for more..](/create_table.py)
 
-####**Step 3**
+#### **Step 3**
 
 * Created final dimensional tables and fact table with appropriate data types and necessary transformation using hive UDF functions.
 * Created Dynamic partitioning on year for fast retrieval for ORC format.
 * This process has columnar format storage for best compression storage.
 * [click for more..](/create_table.py)
 
-####**Step 4**
+#### **Step 4**
 
 * Adhoc queries for getting the answers for the business logic.
 * [click for more..](/queries.py)
@@ -92,6 +92,6 @@ time to fly whereas **June and December** has maximum delays.
 ## **How To Run**
 
 1. Run the ```main.py``` to get everything setup.
-    * use tableau to visualize the requirement and necessary analysis.
+    * use tableau to visualize the requirement and necessary analysis using views.
     * use HQL for necessary analysis.  
 
