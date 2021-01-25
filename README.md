@@ -61,19 +61,16 @@ our on-prem Hadoop HDFS.
 
 * Created staged table to understand the data types and transformations required to batch processing.  
 * Created static partitioning on year for fast retrieval for text format.  
-*  [click for more..](./create_table.py)
 
 #### **Step 3**
 
 * Created final dimensional tables and fact table with appropriate data types and necessary transformation using hive UDF functions.
 * Created Dynamic partitioning on year for fast retrieval for ORC format.
 * This process has columnar format storage for best compression storage.
-* [click for more..](./create_table.py)
 
 #### **Step 4**
 
 * Adhoc queries for getting the answers for the business logic.
-* [click for more..](./queries.py)
 
 **Note** If lets say we get the data every year or month then we can ingest data by creating a staged table
 and insert the delta data into final table using ```insert into..```
